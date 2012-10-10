@@ -1,77 +1,293 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>The-sorting-hat by Gitesh</title>
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>The Sorting Hat</title>
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="javascripts/scale.fix.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1 class="header">The-sorting-hat</h1>
-        <p class="header">Sort pupils into Hogwarts houses</p>
+	<style type="text/css"> 
 
-        <ul>
-          <li class="download"><a class="buttons" href="https://github.com/Gitesh/the-sorting-hat/zipball/master">Download ZIP</a></li>
-          <li class="download"><a class="buttons" href="https://github.com/Gitesh/the-sorting-hat/tarball/master">Download TAR</a></li>
-          <li><a class="buttons github" href="https://github.com/Gitesh/the-sorting-hat">View On GitHub</a></li>
-        </ul>
+			#container1
+				{
+			    float:center;
+			    width:100%;
+			    
+				}
+				
 
-        <p class="header">This project is maintained by <a class="header name" href="https://github.com/Gitesh">Gitesh</a></p>
+			#col1
+			{
+			   float:left;
+			   width:20%;
+			   display: block;
+				margin-left: 10%;
+				margin-right: auto;
+				display: block;			    
+			}
+
+			#col2
+				{
+			    float:left;
+			    width:30%;
+			    background-image:url('img/sorting_hat.gif');
+			    background-position: 50%;
+			    background-repeat: no-repeat;
+			    table-layout: auto;
+			    margin-left: auto;
+			    margin-right: auto;		    
+				 min-height: 10em;
+    			 display: table-cell;
+    			 vertical-align: middle 
+				}
+
+			#col3
+				{
+			    float: left;
+			    width: 30%;
+			    display: block;
+				 margin-left: 10%;
+				 margin-right: auto;
+				}
+				
+	
+				
+			.pupil {
+			   border-top: 1px solid #f7ea97;
+			   background: #332108;
+			   background: -webkit-gradient(linear, left top, left bottom, from(#969c3e), to(#332108));
+			   background: -webkit-linear-gradient(top, #969c3e, #332108);
+			   background: -moz-linear-gradient(top, #969c3e, #332108);
+			   background: -ms-linear-gradient(top, #969c3e, #332108);
+			   background: -o-linear-gradient(top, #969c3e, #332108);
+			   padding: 12.5px 25px;
+			   -webkit-border-radius: 40px;
+			   -moz-border-radius: 40px;
+			   border-radius: 40px;
+			   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+			   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+			   box-shadow: rgba(0,0,0,1) 0 1px 0;
+			   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+			   color: white;
+			   font-size: 22px;
+			   font-family: Georgia, Serif;
+			   text-decoration: none;
+			   vertical-align: middle;
+			   
+			   opacity:0.7;
+				filter:alpha(opacity=70);
+
+			   
+			   line-height: 75px;
+			   
+			   letter-spacing:2px;
+			   table-layout:auto;
+
+			   }
+			   
+			.pupil:hover {
+			   border-top-color: #785a28;
+			   background: #785a28;
+			   color: #ccc;
+			   }
+			.pupil:active {
+			   border-top-color: #455c1b;
+			   background: #455c1b;
+			   }
+			   
+			   
+			   IMG.displayed {
+				    display: block;
+				    margin-left: auto;
+				    margin-right: auto
+
+				 }
+								
+	</style>
+	
+	
+	
+	<script language="javascript" type="text/javascript">
+ 	
+	 	function playSound(soundfile)
+	 	 {
+			 document.getElementById("snd_cheer").innerHTML=
+	 		"<embed src=\""+soundfile+"\" hidden=\"true\" autostart=\"true\" loop=\"false\" />";
+		 }
+		 
+ 	</script>
+
+ 	
+	
+	
+	
+
+</head>
 
 
-      </header>
-      <section>
-        <h3>Welcome to GitHub Pages.</h3>
+<body background="img/inside_hat.jpg">
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<span id="snd_cheer"></span>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+<div id="container1">
+		
+	
+		
+		<div id="col1">
+			<div onclick="show('next', 'Next');" id="Next">
+			
+				<div id="gryffindor_shield" style="display='none'">
+					<IMG class="gryffindor" src="img/gryffindor_shield.png" width="200" height="240" alt="gryffindor" />
+				</div>
+				
+			</div>
+		</div>			
+			
+		
+		
+		
+		
+		<div id="col2">
+		
+			<span class="pupil" onclick="show('ravenclaw', 'Abigail');" id="Abigail"> Abigail </span>
+			
+			<span class="pupil" onclick="show('gryffindor', 'Andrew');" id="Andrew"> Andrew </span>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+	
+			
+			<span class="pupil" onclick="show('ravenclaw', 'Cara');" id="Cara"> Cara </span>
+			
+			<span class="pupil" onclick="show('ravenclaw', 'Catherine');" id="Catherine"> Catherine </span>
+			
+			
+			
+			<span class="pupil" onclick="show('ravenclaw', 'Caty');" id="Caty"> Caty </span> 
+			
+			<span class="pupil" onclick="show('ravenclaw', 'Ciara');" id="Ciara"> Ciara </span>
+				
+			<span class="pupil" onclick="show('gryffindor', 'Devan');" id="Devan"> Devan </span>
+			
+			<span class="pupil" onclick="show('gryffindor', 'Florance');" id="Florance"> Florance </span>
 
-<h3>Designer Templates</h3>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+			
+			<span class="pupil" onclick="show('ravenclaw', 'Issac');" id="Issac"> Issac </span>
+			
+			<span class="pupil" onclick="show('gryffindor', 'Koshin');" id="Koshin"> Koshin </span>
+				
+			<span class="pupil" onclick="show('gryffindor', 'Lennie');" id="Lennie"> Lennie </span>
+			
+			<span class="pupil" onclick="show('gryffindor', 'Leon');" id="Leon"> Leon </span>
 
-<h3>Rather Drive Stick?</h3>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+			
+			<span class="pupil" onclick="show('ravenclaw', 'Lizzie');" id="Lizzie"> Lizzie </span>
+			
+			<span class="pupil" onclick="show('gryffindor', 'Matilda');" id="Matilda"> Matilda </span>
+				
+			<span class="pupil" onclick="show('ravenclaw', 'Megan');" id="Megan"> Megan </span>
+			
+			<span class="pupil" onclick="show('gryffindor', 'Rafe');" id="Rafe"> Rafe </span>
 
-<h3>Authors and Contributors</h3>
+		</div>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
 
-<h3>Support or Contact</h3>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-      <footer>
-        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
-      </footer>
-    </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-		          <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-          </script>
-          <script type="text/javascript">
-            try {
-              var pageTracker = _gat._getTracker("UA-35452673-1");
-            pageTracker._trackPageview();
-            } catch(err) {}
-          </script>
 
-  </body>
+
+		<div id="col3">
+			<div onclick="show('next', 'Next');" id="Next">
+				
+				<div id="ravenclaw_shield" style=".hidden">
+					<IMG class="ravenclaw" src="img/ravenclaw_shield.png" width="200" height="240" alt="ravenclaw" />
+				</div>	
+		
+			</div>
+		</div>
+
+
+<!-- div ends 3 col layout 'container1' -->
+</div>
+
+
+
+<script type="text/javascript" >
+	
+
+	
+	function show(house, pupil){
+
+		var house;
+		var pupil;	
+		
+//		document.body.background= "";		
+		
+		document.body.style.backgroundImage= "url(img/inside_hat.jpg)";	
+		document.body.style.backgroundRepeat= "no-repeat";
+		document.body.style.backgroundPosition= "50%";				
+
+
+
+		if (house==="ravenclaw")
+		{
+
+
+		   
+			document.getElementById("ravenclaw_shield").style.visibility="visible";
+			
+			document.getElementById("gryffindor_shield").style.visibility="hidden";
+			
+			document.getElementById(pupil).style.color="#000055";
+			
+			playSound('snd/snd_ravenclaw.mp3');
+			
+			   
+		   
+		   		
+		}
+		else if (house==="gryffindor")
+		{
+
+			
+			
+			document.getElementById("ravenclaw_shield").style.visibility="hidden";
+			
+			document.getElementById("gryffindor_shield").style.visibility="visible";	
+			
+			document.getElementById(pupil).style.color="#fff244";		 
+			
+			playSound('snd/snd_gryffindor.mp3');  
+			
+
+		}	   
+		else if (house==="next")
+		{
+			
+			//alert("next");			
+			
+
+			document.getElementById("ravenclaw_shield").style.visibility="hidden";
+			
+			document.getElementById("gryffindor_shield").style.visibility="hidden";	
+			
+			document.getElementById("col2").style.backgroundImage="url('')";				
+			
+			//document.body.style.backgroundImage= "";	
+			//document.body.style.backgroundRepeat= "";
+			//document.body.style.backgroundPosition= "";			
+			
+			
+			
+		}
+		
+	
+	   
+	}
+
+
+
+</script>
+
+
+
+</body>
 </html>
