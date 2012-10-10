@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>The Sorting Hat</title>
+
+	<style type="text/css"> 
+
+			#container1
+				{
+			    float:center;
+			    width:100%;
+			    
+				}
+				
+
+			#col1
+			{
+			   float:left;
+			   width:20%;
+			   display: block;
+				margin-left: 10%;
+				margin-right: auto;
+				display: block;			    
+			}
+
+			#col2
+				{
+			    float:left;
+			    width:30%;
+			    background-image:url('img/sorting_hat.gif');
+			    background-position: 50%;
+			    background-repeat: no-repeat;
+			    table-layout: auto;
+			    margin-left: auto;
+			    margin-right: auto;		    
+				 min-height: 10em;
+    			 display: table-cell;
+    			 vertical-align: middle 
+				}
+
+			#col3
+				{
+			    float: left;
+			    width: 30%;
+			    display: block;
+				 margin-left: 10%;
+				 margin-right: auto;
+				}
+				
+	
+				
+			.pupil {
+			   border-top: 1px solid #f7ea97;
+			   background: #332108;
+			   background: -webkit-gradient(linear, left top, left bottom, from(#969c3e), to(#332108));
+			   background: -webkit-linear-gradient(top, #969c3e, #332108);
+			   background: -moz-linear-gradient(top, #969c3e, #332108);
+			   background: -ms-linear-gradient(top, #969c3e, #332108);
+			   background: -o-linear-gradient(top, #969c3e, #332108);
+			   padding: 12.5px 25px;
+			   -webkit-border-radius: 40px;
+			   -moz-border-radius: 40px;
+			   border-radius: 40px;
+			   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+			   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+			   box-shadow: rgba(0,0,0,1) 0 1px 0;
+			   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+			   color: white;
+			   font-size: 22px;
+			   font-family: Georgia, Serif;
+			   text-decoration: none;
+			   vertical-align: middle;
+			   
+			   opacity:0.7;
+				filter:alpha(opacity=70);
+
+			   
+			   line-height: 75px;
+			   
+			   letter-spacing:2px;
+			   table-layout:auto;
+
+			   }
+			   
+			.pupil:hover {
+			   border-top-color: #785a28;
+			   background: #785a28;
+			   color: #ccc;
+			   }
+			.pupil:active {
+			   border-top-color: #455c1b;
+			   background: #455c1b;
+			   }
+			   
+			   
+			   IMG.displayed {
+				    display: block;
+				    margin-left: auto;
+				    margin-right: auto
+
+				 }
+								
+	</style>
+	
+	
+	
+	<script language="javascript" type="text/javascript">
+ 	
+	 	function playSound(soundfile)
+	 	 {
+			 document.getElementById("snd_cheer").innerHTML=
+	 		"<embed src=\""+soundfile+"\" hidden=\"true\" autostart=\"true\" loop=\"false\" />";
+		 }
+		 
+ 	</script>
+
+ 	
+	
+	
+	
+
+</head>
+
+
+<body background="img/inside_hat.jpg">
+
+<span id="snd_cheer"></span>
+
+<div id="container1">
+		
+	
+		
+		<div id="col1">
+			<div onclick="show('next', 'Next');" id="Next">
+			
+				<div id="gryffindor_shield" style="display='none'">
+					<IMG class="gryffindor" src="img/gryffindor_shield.png" width="200" height="240" alt="gryffindor" />
+				</div>
+				
+			</div>
+		</div>			
+			
+		
+		
+		
+		
+		<div id="col2">
+		
+			<span class="pupil" onclick="show('ravenclaw', 'Abigail');" id="Abigail"> Abigail </span>
+			
+			<span class="pupil" onclick="show('gryffindor', 'Andrew');" id="Andrew"> Andrew </span>
+
+	
+			
+			<span class="pupil" onclick="show('ravenclaw', 'Cara');" id="Cara"> Cara </span>
+			
+			<span class="pupil" onclick="show('ravenclaw', 'Catherine');" id="Catherine"> Catherine </span>
+			
+			
+			
+			<span class="pupil" onclick="show('ravenclaw', 'Caty');" id="Caty"> Caty </span> 
+			
+			<span class="pupil" onclick="show('ravenclaw', 'Ciara');" id="Ciara"> Ciara </span>
+				
+			<span class="pupil" onclick="show('gryffindor', 'Devan');" id="Devan"> Devan </span>
+			
+			<span class="pupil" onclick="show('gryffindor', 'Florance');" id="Florance"> Florance </span>
+
+
+			
+			<span class="pupil" onclick="show('ravenclaw', 'Issac');" id="Issac"> Issac </span>
+			
+			<span class="pupil" onclick="show('gryffindor', 'Koshin');" id="Koshin"> Koshin </span>
+				
+			<span class="pupil" onclick="show('gryffindor', 'Lennie');" id="Lennie"> Lennie </span>
+			
+			<span class="pupil" onclick="show('gryffindor', 'Leon');" id="Leon"> Leon </span>
+
+
+			
+			<span class="pupil" onclick="show('ravenclaw', 'Lizzie');" id="Lizzie"> Lizzie </span>
+			
+			<span class="pupil" onclick="show('gryffindor', 'Matilda');" id="Matilda"> Matilda </span>
+				
+			<span class="pupil" onclick="show('ravenclaw', 'Megan');" id="Megan"> Megan </span>
+			
+			<span class="pupil" onclick="show('gryffindor', 'Rafe');" id="Rafe"> Rafe </span>
+
+		</div>
+
+
+
+
+
+		<div id="col3">
+			<div onclick="show('next', 'Next');" id="Next">
+				
+				<div id="ravenclaw_shield" style=".hidden">
+					<IMG class="ravenclaw" src="img/ravenclaw_shield.png" width="200" height="240" alt="ravenclaw" />
+				</div>	
+		
+			</div>
+		</div>
+
+
+<!-- div ends 3 col layout 'container1' -->
+</div>
+
+
+
+<script type="text/javascript" >
+	
+
+	
+	function show(house, pupil){
+
+		var house;
+		var pupil;	
+		
+//		document.body.background= "";		
+		
+		document.body.style.backgroundImage= "url(img/inside_hat.jpg)";	
+		document.body.style.backgroundRepeat= "no-repeat";
+		document.body.style.backgroundPosition= "50%";				
+
+
+
+		if (house==="ravenclaw")
+		{
+
+
+		   
+			document.getElementById("ravenclaw_shield").style.visibility="visible";
+			
+			document.getElementById("gryffindor_shield").style.visibility="hidden";
+			
+			document.getElementById(pupil).style.color="#000055";
+			
+			playSound('snd/snd_ravenclaw.mp3');
+			
+			   
+		   
+		   		
+		}
+		else if (house==="gryffindor")
+		{
+
+			
+			
+			document.getElementById("ravenclaw_shield").style.visibility="hidden";
+			
+			document.getElementById("gryffindor_shield").style.visibility="visible";	
+			
+			document.getElementById(pupil).style.color="#fff244";		 
+			
+			playSound('snd/snd_gryffindor.mp3');  
+			
+
+		}	   
+		else if (house==="next")
+		{
+			
+			//alert("next");			
+			
+
+			document.getElementById("ravenclaw_shield").style.visibility="hidden";
+			
+			document.getElementById("gryffindor_shield").style.visibility="hidden";	
+			
+			document.getElementById("col2").style.backgroundImage="url('')";				
+			
+			//document.body.style.backgroundImage= "";	
+			//document.body.style.backgroundRepeat= "";
+			//document.body.style.backgroundPosition= "";			
+			
+			
+			
+		}
+		
+	
+	   
+	}
+
+
+
+</script>
+
+
+
+</body>
+</html>
